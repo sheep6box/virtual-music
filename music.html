@@ -227,53 +227,161 @@
         var target = '#musicTable tbody';
         var insert = '';
 
-          var data = [
-            { "id": "MFWtsp2MEgw",  "name": "BEAM!!",  "artist": "水月せな&星野光",  "time": "4:34",  "date": "2019/05/20",  "y-channel": "UCUHsCratmjA7dPbAulQi7dQ",  "t-account": "Starlight_chann"},
-            { "id": "If_GLYKh4aY",  "name": "Life is tasty!",  "artist": "燦鳥ノム",  "time": "5:43",  "date": "2019/05/28",  "y-channel": "UCwRKt_raV3N5KZgxcFyC1vw",  "t-account": "suntory_nomu"},
-            { "id": "hmFr9rj7-pE",  "name": "君にルムウム",  "artist": "燦鳥ノム",  "time": "3:24",  "date": "2019/07/31",  "y-channel": "UCwRKt_raV3N5KZgxcFyC1vw",  "t-account": ""},
-            { "id": "S8dmq5YIUoc",  "name": "AIAIAI",  "artist": "キズナアイ",  "time": "3:13",  "date": "2019/03/29",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
-            { "id": "eolXxm37-8Y",  "name": "miracle step",  "artist": "キズナアイ",  "time": "3:13",  "date": "2018/11/16",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "OIdlW0u3ZXc",  "name": "over the reality",  "artist": "キズナアイ",  "time": "3:40",  "date": "2018/11/09",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "X-6foRGSjPg",  "name": "melty world",  "artist": "キズナアイ",  "time": "4:48",  "date": "2018/11/30",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "Q_dnENXIcPg",  "name": "new world",  "artist": "キズナアイ",  "time": "3:56",  "date": "2018/11/02",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "NJGPF7t368E",  "name": "hello，alone",  "artist": "キズナアイ",  "time": "4:06",  "date": "2018/12/07",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "4byaJ9w47uU",  "name": "Hello，Morning",  "artist": "キズナアイ",  "time": "3:43",  "date": "2018/07/15",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "HRCqXIBFRhU",  "name": "mirai",  "artist": "キズナアイ",  "time": "5:12",  "date": "2018/12/21",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "yeD7eAuza74",  "name": "future base",  "artist": "キズナアイ",  "time": "3:03",  "date": "2018/10/26",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "w3nSFJ4MQ7M",  "name": "meet you",  "artist": "キズナアイ",  "time": "4:19",  "date": "2018/12/14",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": ""},
-            { "id": "Fw--zRltlyE",  "name": "Dance With Cinderella !",  "artist": "輝夜 月",  "time": "3:06",  "date": "2019/06/26",  "y-channel": "UCQYADFw7xEJ9oZSM5ZbqyBw",  "t-account": "_KaguyaLuna"},
-            { "id": "yiVGudcnsAg",  "name": "NEW ERA",  "artist": "輝夜 月",  "time": "3:51",  "date": "2019/05/10",  "y-channel": "UCQYADFw7xEJ9oZSM5ZbqyBw",  "t-account": ""},
-            { "id": "-JO4tpmmU2c",  "name": "Beyond the Moon",  "artist": "輝夜 月",  "time": "2:53",  "date": "2019/03/14",  "y-channel": "UCQYADFw7xEJ9oZSM5ZbqyBw",  "t-account": ""},
-            { "id": "n0ov2G-_UvU",  "name": "quiz",  "artist": "花譜",  "time": "4:20",  "date": "2019/08/06",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
-            { "id": "y6TGSY9Zll0",  "name": "そして花になる",  "artist": "花譜",  "time": "4:31",  "date": "2019/08/01",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "dledRqPTNT8",  "name": "夜が降り止む前に",  "artist": "花譜",  "time": "3:38",  "date": "2019/06/28",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "tMKrECxEpq8",  "name": "過去を喰らう",  "artist": "花譜",  "time": "4:05",  "date": "2019/06/05",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "M1RIUrgJqWw",  "name": "雛鳥",  "artist": "花譜",  "time": "4:27",  "date": "2019/03/22",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "VcACkGvGKjM",  "name": "活花",  "artist": "花譜",  "time": "1:14",  "date": "2019/03/20",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "2Nj1l-S2FJU",  "name": "忘れてしまえ",  "artist": "花譜",  "time": "4:01",  "date": "2019/01/31",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "AqwFHfsAlx0",  "name": "魔女",  "artist": "花譜",  "time": "4:43",  "date": "2019/01/09",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "hcm1LGOxJbc",  "name": "心臓と絡繰",  "artist": "花譜",  "time": "4:19",  "date": "2018/12/28",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "3Wtx6k2vInU",  "name": "糸",  "artist": "花譜",  "time": "3:51",  "date": "2018/12/06",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": ""},
-            { "id": "PGnO5rWsAok",  "name": "ChuChuChu♡ダーリン",  "artist": "響木アオ",  "time": "4:28",  "date": "2018/05/24",  "y-channel": "UCNwo7eikmX5HPs7NedWVBgw",  "t-account": "hibiki_ao"},
-          ];
+        var data = [
+          { "id": "EQybHllR2mQ",  "name": "Three Piece - スリーピース-",  "artist": "Alt!!",  "time": "4:30",  "date": "2018/12/09",  "y-channel": "UC_cCW1xmXwRFp1tX-RD2X1Q",  "t-account": "alt_vtuber"},
+          { "id": "zgJhhzIbWmI",  "name": "Hello My Stage!",  "artist": "Alt!!",  "time": "4:51",  "date": "2019/03/17",  "y-channel": "UC_cCW1xmXwRFp1tX-RD2X1Q",  "t-account": "alt_vtuber"},
+          { "id": "fXFeFWZBZRM",  "name": "たのしむーぶ",  "artist": "Alt!!",  "time": "3:49",  "date": "2019/04/15",  "y-channel": "UC_cCW1xmXwRFp1tX-RD2X1Q",  "t-account": "alt_vtuber"},
+          { "id": "BZBrsxqCPO8",  "name": "Dramatic Parade",  "artist": "Alt!!",  "time": "4:13",  "date": "2019/08/05",  "y-channel": "UC_cCW1xmXwRFp1tX-RD2X1Q",  "t-account": "alt_vtuber"},
+          { "id": "ZkvtKUQp3nM",  "name": "Creating world",  "artist": "AZKi",  "time": "4:36",  "date": "2018/12/28",  "y-channel": "UC0TXe_LYZ4scaW2XMyi5_kw",  "t-account": "AZKi_VDiVA"},
+          { "id": "tum7dljV2ts",  "name": "I can't control myself",  "artist": "AZKi",  "time": "3:34",  "date": "2019/02/28",  "y-channel": "UC0TXe_LYZ4scaW2XMyi5_kw",  "t-account": "AZKi_VDiVA"},
+          { "id": "-VQx0MtsvSQ",  "name": "いのち",  "artist": "AZKi",  "time": "4:32",  "date": "2019/04/30",  "y-channel": "UC0TXe_LYZ4scaW2XMyi5_kw",  "t-account": "AZKi_VDiVA"},
+          { "id": "ZezL7jHGKCA",  "name": "ハートビート",  "artist": "AZKi",  "time": "4:21",  "date": "2019/07/19",  "y-channel": "UC0TXe_LYZ4scaW2XMyi5_kw",  "t-account": "AZKi_VDiVA"},
+          { "id": "ATNXVmWtVGY",  "name": "メッセージ",  "artist": "GEMS COMPANY(citross)",  "time": "5:05",  "date": "2018/12/28",  "y-channel": "UCBvICYXxPK8PkoocBGnmeHA",  "t-account": "gems_company"},
+          { "id": "j-ywMseo4D0",  "name": "オンリー・マイ・フレンド",  "artist": "GEMS COMPANY(珠根うた・星菜日向夏)",  "time": "5:03",  "date": "2018/10/19",  "y-channel": "UCBvICYXxPK8PkoocBGnmeHA",  "t-account": "gems_company"},
+          { "id": "R25PAaqNQYI",  "name": "しゃかりきマイライフ！",  "artist": "GEMS COMPANY(奈日抽ねね・有栖川レイカ)",  "time": "4:04",  "date": "2018/12/05",  "y-channel": "UCBvICYXxPK8PkoocBGnmeHA",  "t-account": "gems_company"},
+          { "id": "J8PUUv4LFkQ",  "name": "ヒトガタ ",  "artist": "HIMEHINA(田中ヒメ＋鈴木ヒナ)",  "time": "3:59",  "date": "2019/02/20",  "y-channel": "UCFv2z4iM5vHrS8bZPq4fHQQ",  "t-account": "HimeTanaka_HH"},
+          { "id": "O5uyMKs0n3Q",  "name": "ヒバリ",  "artist": "HIMEHINA(田中ヒメ＋鈴木ヒナ)",  "time": "4:37",  "date": "2019/07/05",  "y-channel": "UCFv2z4iM5vHrS8bZPq4fHQQ",  "t-account": "HimeTanaka_HH"},
+          { "id": "nhFgmVDPNlo",  "name": "VR - Virtual Reality",  "artist": "KMNZ LITA",  "time": "3:16",  "date": "2019/03/01",  "y-channel": "UCwuS0uY-Z2Gr_5OV2oFybFA",  "t-account": ""},
+          { "id": "f-nl0omQcnE",  "name": "夢色エール",  "artist": "Re:A projecT",  "time": "5:05",  "date": "2019/03/31",  "y-channel": "UCvTLPxNpr1V3MpQDL9PrIcQ",  "t-account": "Re_AprojecT"},
+          { "id": "MuDhyfj2jo4",  "name": "シグナル",  "artist": "Re:A projecT",  "time": "4:06",  "date": "2019/04/11",  "y-channel": "UCvTLPxNpr1V3MpQDL9PrIcQ",  "t-account": "Re_AprojecT"},
+          { "id": "dgl7MIB1p5A",  "name": "放課後のダンスフロア",  "artist": "somunia",  "time": "3:21",  "date": "2019/03/23",  "y-channel": "UCqhnvjASWaS1eF_023Y--DQ",  "t-account": "she_is_wired"},
+          { "id": "d7mAktV4Prc",  "name": "summer leap",  "artist": "somunia",  "time": "3:21",  "date": "2019/03/30",  "y-channel": "UCqhnvjASWaS1eF_023Y--DQ",  "t-account": "she_is_wired"},
+          { "id": "tzY7vm1lvVc",  "name": "Rewind you",  "artist": "somunia",  "time": "3:11",  "date": "2019/04/26",  "y-channel": "UCqhnvjASWaS1eF_023Y--DQ",  "t-account": "she_is_wired"},
+          { "id": "uUvthLpSHrQ",  "name": "twinkle night",  "artist": "somunia",  "time": "3:47",  "date": "2019/05/04",  "y-channel": "UCqhnvjASWaS1eF_023Y--DQ",  "t-account": "she_is_wired"},
+          { "id": "Jl3ti1ARTfo",  "name": "UNITE IN THE SKY",  "artist": "unity-chan!",  "time": "4:00",  "date": "2018/12/31",  "y-channel": "UCvDLWW-HZ0JJHzblazs-OWw",  "t-account": ""},
+          { "id": "11Ybh39IiU4",  "name": "拡散性マジョリティ",  "artist": "X'Flare",  "time": "5:04",  "date": "2018/10/10",  "y-channel": "UCaWuiIyX89dLP5H4pA7QAvQ",  "t-account": "XFlareVtuber1"},
+          { "id": "UvvYqqqCcno",  "name": "干渉ベクトルハート",  "artist": "X'Flare",  "time": "3:54",  "date": "2018/11/10",  "y-channel": "UCaWuiIyX89dLP5H4pA7QAvQ",  "t-account": "XFlareVtuber1"},
+          { "id": "tRe5rwSOzM0",  "name": "ODANGO",  "artist": "X'Flare",  "time": "3:59",  "date": "2019/02/10",  "y-channel": "UCaWuiIyX89dLP5H4pA7QAvQ",  "t-account": "XFlareVtuber1"},
+          { "id": "BnH6RiFm9f4",  "name": "透明声彩",  "artist": "YuNi",  "time": "3:44",  "date": "2018/10/26",  "y-channel": "UCHTnX0CSX_KObo5I9WuZ64g",  "t-account": "yuni_vsinger"},
+          { "id": "-VLYmY_1qx8",  "name": "花は幻",  "artist": "YuNi",  "time": "3:52",  "date": "2019/03/10",  "y-channel": "UCHTnX0CSX_KObo5I9WuZ64g",  "t-account": "yuni_vsinger"},
+          { "id": "XtlDHnWgGeM",  "name": "人類みなセンパイ！",  "artist": "アズマリム",  "time": "4:35",  "date": "2018/12/24",  "y-channel": "UCARI2g7r-PHaxrIcAYsMfmA",  "t-account": "azuma_lim"},
+          { "id": "uSLljr73EU8",  "name": "ショートカットでよろしく！",  "artist": "えのぐ",  "time": "4:38",  "date": "2018/08/25",  "y-channel": "UCFI81W9F49a7GvimKF905eQ",  "t-account": "rbc_geino"},
+          { "id": "NX_6x5cE_0k",  "name": "絵空事",  "artist": "えのぐ",  "time": "3:42",  "date": "2019/04/13",  "y-channel": "UCFI81W9F49a7GvimKF905eQ",  "t-account": "rbc_geino"},
+          { "id": "D3TL_KfWpr8",  "name": "僕たちの青春ロード",  "artist": "えのぐ(ひなつくり)",  "time": "2:21",  "date": "2018/10/10",  "y-channel": "UCFI81W9F49a7GvimKF905eQ",  "t-account": "rbc_geino"},
+          { "id": "6tUs2h83Xp4",  "name": "君がいてくれれば ",  "artist": "えのぐ(鈴木あんず・白藤環)",  "time": "2:10",  "date": "2018/12/29",  "y-channel": "UCFI81W9F49a7GvimKF905eQ",  "t-account": "rbc_geino"},
+          { "id": "4byaJ9w47uU",  "name": "Hello，Morning (Prod.Nor)",  "artist": "キズナアイ",  "time": "3:44",  "date": "2018/07/15",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "yeD7eAuza74",  "name": "future base",  "artist": "キズナアイ",  "time": "3:03",  "date": "2018/10/26",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "Q_dnENXIcPg",  "name": "new world",  "artist": "キズナアイ",  "time": "3:56",  "date": "2018/11/02",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "OIdlW0u3ZXc",  "name": "over the reality",  "artist": "キズナアイ",  "time": "3:40",  "date": "2018/11/09",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "eolXxm37-8Y",  "name": "miracle step",  "artist": "キズナアイ",  "time": "3:13",  "date": "2018/11/16",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "LyJ5vCAYZXQ",  "name": "Hello，Morning（Pa's Lam System Remix）",  "artist": "キズナアイ",  "time": "4:07",  "date": "2018/11/23",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "X-6foRGSjPg",  "name": "melty world",  "artist": "キズナアイ",  "time": "4:48",  "date": "2018/11/30",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "NJGPF7t368E",  "name": "hello，alone",  "artist": "キズナアイ",  "time": "4:06",  "date": "2018/12/07",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "w3nSFJ4MQ7M",  "name": "meet you",  "artist": "キズナアイ",  "time": "4:19",  "date": "2018/12/14",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "HRCqXIBFRhU",  "name": "mirai",  "artist": "キズナアイ",  "time": "5:12",  "date": "2018/12/21",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "S8dmq5YIUoc",  "name": "AIAIAI",  "artist": "キズナアイ",  "time": "3:13",  "date": "2019/03/29",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "yLrstz80MKs",  "name": "Sky High",  "artist": "キズナアイ",  "time": "3:49",  "date": "2019/07/22",  "y-channel": "UC4YaOt1yT-ZeyB0OmxHgolA",  "t-account": "aichan_nel"},
+          { "id": "cFPshMNlfJ0",  "name": "Virthday",  "artist": "ココロナキ",  "time": "4:08",  "date": "2018/11/19",  "y-channel": "UCkemNkC6e37JsQbkM7dJ64w",  "t-account": "kokoronaki7"},
+          { "id": "Z1CZuUxJNnI",  "name": "Drop",  "artist": "ずぼら ゆる",  "time": "3:27",  "date": "2019/01/11",  "y-channel": "UC8sTZzRGKVvK4u3SfjJTfhQ",  "t-account": "YuruZubora"},
+          { "id": "BvlCYJ1XZ3Y",  "name": "木の芽時の空",  "artist": "ときのそら",  "time": "1:59",  "date": "2018/01/19",  "y-channel": "UCp6993wxpyDPHUpavwDFqgg",  "t-account": "tokino_sora"},
+          { "id": "kTV6uSmiXEw",  "name": "夢色アスタリスク",  "artist": "ときのそら",  "time": "5:17",  "date": "2018/01/29",  "y-channel": "UCp6993wxpyDPHUpavwDFqgg",  "t-account": "tokino_sora"},
+          { "id": "pKASI4dEG3A",  "name": "わたしとあなたと皆さまと！",  "artist": "ときのそら",  "time": "1:33",  "date": "2018/05/15",  "y-channel": "UCp6993wxpyDPHUpavwDFqgg",  "t-account": "tokino_sora"},
+          { "id": "yVxmv4oqPzs",  "name": "未練レコード",  "artist": "ときのそら",  "time": "3:34",  "date": "2018/10/04",  "y-channel": "UCp6993wxpyDPHUpavwDFqgg",  "t-account": "tokino_sora"},
+          { "id": "Z9oZ4r0cxME",  "name": "Wandering Days",  "artist": "ときのそら",  "time": "4:08",  "date": "2018/11/12",  "y-channel": "UCp6993wxpyDPHUpavwDFqgg",  "t-account": "tokino_sora"},
+          { "id": "MjkDaUwPzkU",  "name": "そんな雨の日には",  "artist": "ときのそら",  "time": "3:46",  "date": "2018/12/12",  "y-channel": "UCp6993wxpyDPHUpavwDFqgg",  "t-account": "tokino_sora"},
+          { "id": "nP5mhWX2i0Q",  "name": "海より深い空の下",  "artist": "ときのそら",  "time": "3:59",  "date": "2018/12/18",  "y-channel": "UCp6993wxpyDPHUpavwDFqgg",  "t-account": "tokino_sora"},
+          { "id": "rbd-m8r5Ujs",  "name": "Dream☆Story",  "artist": "ときのそら",  "time": "4:41",  "date": "2019/01/08",  "y-channel": "UCp6993wxpyDPHUpavwDFqgg",  "t-account": "tokino_sora"},
+          { "id": "M9VZ-BczRH0",  "name": "dream triangle",  "artist": "にじさんじjk組(月ノ美兎・静凛・樋口楓)",  "time": "6:30",  "date": "2019/02/15",  "y-channel": "UCX7YkU9nEeaoZbkVLVajcMg",  "t-account": "Nijisanji_app"},
+          { "id": "T5o7-9Bc_-g",  "name": "ぶいちゅっばの歌",  "artist": "ハニーストラップ(周防パトラ)",  "time": "1:10",  "date": "2018/08/18",  "y-channel": "UCeLzT-7b2PBcunJplmWtoDg",  "t-account": "Patra_HNST"},
+          { "id": "Nk1jpG-ArCk",  "name": "HoneyChristmas",  "artist": "ハニーストラップ(周防パトラ)",  "time": "2:45",  "date": "2018/12/22",  "y-channel": "UCeLzT-7b2PBcunJplmWtoDg",  "t-account": "Patra_HNST"},
+          { "id": "KDX2CeeWHVM",  "name": "ハートサーモグラフィー",  "artist": "ハニーストラップ(周防パトラ)",  "time": "4:11",  "date": "2019/01/12",  "y-channel": "UCeLzT-7b2PBcunJplmWtoDg",  "t-account": "Patra_HNST"},
+          { "id": "GHKuqM46Z6Y",  "name": "ラムネ色クレーター/夏の思い出にしてね。",  "artist": "ハニーストラップ(周防パトラ)",  "time": "3:40",  "date": "2019/07/21",  "y-channel": "UCeLzT-7b2PBcunJplmWtoDg",  "t-account": "Patra_HNST"},
+          { "id": "mj0MDD7G6rA",  "name": "よっぱっぱの歌",  "artist": "ハニーストラップ(西園寺メアリ)",  "time": "5:02",  "date": "2018/11/15",  "y-channel": "UCwePpiw1ocZRSNSkpKvVISw",  "t-account": "Mary_HNST"},
+          { "id": "-kNkHGVmmKU",  "name": "ピコボーイ",  "artist": "ぼっちぼろまる",  "time": "3:41",  "date": "2016/12/06",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "uY9RTQj_Fak",  "name": "僕が本当のオバケになったら",  "artist": "ぼっちぼろまる",  "time": "4:01",  "date": "2016/12/06",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "hbCxj9L1jEI",  "name": "夕焼",  "artist": "ぼっちぼろまる",  "time": "4:17",  "date": "2016/12/06",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "28cHjoB-1yk",  "name": "アイウェア・ラプソディー",  "artist": "ぼっちぼろまる",  "time": "4:41",  "date": "2017/01/13",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "NacF03P1_x0",  "name": "あるくマーメイド",  "artist": "ぼっちぼろまる",  "time": "4:23",  "date": "2017/02/18",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "Fi-gTbiSnrE",  "name": "ペットボトルロケット",  "artist": "ぼっちぼろまる",  "time": "3:27",  "date": "2017/03/31",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "-TRK3GRYUK0",  "name": "珈琲牛乳",  "artist": "ぼっちぼろまる",  "time": "3:52",  "date": "2017/04/30",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "9mPDYPYC7VU",  "name": "もぐらのうた",  "artist": "ぼっちぼろまる",  "time": "3:05",  "date": "2017/05/31",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "Lb_nSz4su7c",  "name": "スーパーボウル",  "artist": "ぼっちぼろまる",  "time": "3:27",  "date": "2017/07/01",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "aNPPYKH3b8w",  "name": "海にポイすて",  "artist": "ぼっちぼろまる",  "time": "4:00",  "date": "2017/08/02",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "8KiXg3H3Zww",  "name": "おうちフェス",  "artist": "ぼっちぼろまる",  "time": "3:05",  "date": "2017/08/31",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "iS5hzXV4a6s",  "name": "炎上ひみつきち",  "artist": "ぼっちぼろまる",  "time": "4:02",  "date": "2017/10/01",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "1T0XtlM_8QQ",  "name": "タンタカタンタンタンタンメン",  "artist": "ぼっちぼろまる",  "time": "4:08",  "date": "2017/11/01",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "QEPd--Xb5_I",  "name": "からまってマフラー",  "artist": "ぼっちぼろまる",  "time": "4:32",  "date": "2017/12/01",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "JwC4tJJF1ig",  "name": "フクブクロック",  "artist": "ぼっちぼろまる",  "time": "3:35",  "date": "2018/01/01",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "TFPCI4g6LFw",  "name": "変じゃない？",  "artist": "ぼっちぼろまる",  "time": "3:25",  "date": "2018/02/01",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "iobPY0rSMo8",  "name": "うたうぼっちのテーマ",  "artist": "ぼっちぼろまる",  "time": "2:47",  "date": "2019/04/01",  "y-channel": "UCzmKiZrrf3-F6TBV0MRw88g",  "t-account": "borotchi"},
+          { "id": "3kthfi0Y3Tc",  "name": "キューティ・ダーティ・クレイジー・ルーキー！",  "artist": "まじかるどーる",  "time": "3:51",  "date": "2019/02/28",  "y-channel": "UCzhwXcK9DTiY-VqYjwnjZhQ",  "t-account": "magical_matsuri"},
+          { "id": "4VeCXCZRmlA",  "name": "ミッドナイト・ファイティングブリーフ",  "artist": "ミソシタ",  "time": "2:52",  "date": "2018/03/19",  "y-channel": "UCctWfjgLUh1yt-Wdz6W4yFQ",  "t-account": ""},
+          { "id": "keEX8HRlMEA",  "name": "革命前夜",  "artist": "ミソシタ",  "time": "2:33",  "date": "2018/04/05",  "y-channel": "UCctWfjgLUh1yt-Wdz6W4yFQ",  "t-account": ""},
+          { "id": "ATvbX11MSKw",  "name": "ハイカラ浪漫",  "artist": "ミディ",  "time": "1:53",  "date": "2018/03/13",  "y-channel": "UCs4zWdCrlnXmpVkjOgAHs0w",  "t-account": "mid_midy"},
+          { "id": "Sd3RaEwKUkI",  "name": "超絶爽快adventure",  "artist": "ミディ",  "time": "3:47",  "date": "2018/05/07",  "y-channel": "UCs4zWdCrlnXmpVkjOgAHs0w",  "t-account": "mid_midy"},
+          { "id": "vv0X1Dlpy60",  "name": "パレード",  "artist": "ミディ",  "time": "3:48",  "date": "2019/03/18",  "y-channel": "UCs4zWdCrlnXmpVkjOgAHs0w",  "t-account": "mid_midy"},
+          { "id": "JQSJRDxCimM",  "name": "TH3RMAL |2UNAWA9",  "artist": "ミディ",  "time": "3:17",  "date": "2019/05/18",  "y-channel": "UCs4zWdCrlnXmpVkjOgAHs0w",  "t-account": "mid_midy"},
+          { "id": "7StwGkAKDEA",  "name": "アクセル",  "artist": "ミライアカリ",  "time": "4:12",  "date": "2018/12/31",  "y-channel": "UCMYtONm441rBogWK_xPH9HA",  "t-account": "MiraiAkari_prj"},
+          { "id": "ZbYn9J_cuW8",  "name": "ミライトミライ",  "artist": "ミライアカリ",  "time": "3:43",  "date": "2019/01/01",  "y-channel": "UCMYtONm441rBogWK_xPH9HA",  "t-account": "MiraiAkari_prj"},
+          { "id": "BkIvqlw_0lw",  "name": "時空の蜃気楼",  "artist": "ミライアカリ",  "time": "3:58",  "date": "2019/06/07",  "y-channel": "UCMYtONm441rBogWK_xPH9HA",  "t-account": "MiraiAkari_prj"},
+          { "id": "WezmreVcfZM",  "name": "愛言葉Ⅲ",  "artist": "もちひよこ",  "time": "4:19",  "date": "2019/01/05",  "y-channel": "UCZ1WJDkMNiZ_QwHnNrVf7Pw",  "t-account": "mochi8hiyoko"},
+          { "id": "bk1zyKlQg5A",  "name": "Chamomile",  "artist": "ヨシナ",  "time": "4:15",  "date": "2019/07/29",  "y-channel": "UCxO20NsLtKEURzuprMZKr7g",  "t-account": "YoshinaProject"},
+          { "id": "Klsca1OcwH8",  "name": "メルティランドナイトメア",  "artist": "ロボ子",  "time": "4:41",  "date": "2018/11/10",  "y-channel": "UCDqI2jOz0weumE8s7paEk6g",  "t-account": "robocosan"},
+          { "id": "3Wtx6k2vInU",  "name": "糸",  "artist": "花譜",  "time": "3:51",  "date": "2018/12/06",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "hcm1LGOxJbc",  "name": "心臓と絡繰",  "artist": "花譜",  "time": "4:19",  "date": "2018/12/28",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "AqwFHfsAlx0",  "name": "魔女",  "artist": "花譜",  "time": "4:43",  "date": "2019/01/09",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "2Nj1l-S2FJU",  "name": "忘れてしまえ",  "artist": "花譜",  "time": "4:01",  "date": "2019/01/31",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "VcACkGvGKjM",  "name": "活花",  "artist": "花譜",  "time": "1:14",  "date": "2019/03/20",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "M1RIUrgJqWw",  "name": "雛鳥",  "artist": "花譜",  "time": "4:27",  "date": "2019/03/22",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "tMKrECxEpq8",  "name": "過去を喰らう",  "artist": "花譜",  "time": "4:05",  "date": "2019/06/05",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "dledRqPTNT8",  "name": "夜が降り止む前に",  "artist": "花譜",  "time": "3:38",  "date": "2019/06/28",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "y6TGSY9Zll0",  "name": "そして花になる",  "artist": "花譜",  "time": "4:31",  "date": "2019/08/01",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "n0ov2G-_UvU",  "name": "quiz",  "artist": "花譜",  "time": "4:20",  "date": "2019/08/06",  "y-channel": "UCQ1U65-CQdIoZ2_NA4Z4F7A",  "t-account": "virtual_kaf"},
+          { "id": "TtD7xcruYAk",  "name": "蒼に躊躇う",  "artist": "花鋏キョウ",  "time": "3:16",  "date": "2019/04/03",  "y-channel": "UC4OeUf_KfYRrwksschtRYow",  "t-account": "Kyo_Hanabasami"},
+          { "id": "-JO4tpmmU2c",  "name": "Beyond the Moon",  "artist": "輝夜 月",  "time": "2:53",  "date": "2019/03/14",  "y-channel": "UCQYADFw7xEJ9oZSM5ZbqyBw",  "t-account": "_KaguyaLuna"},
+          { "id": "yiVGudcnsAg",  "name": "NEW ERA",  "artist": "輝夜 月",  "time": "3:51",  "date": "2019/05/10",  "y-channel": "UCQYADFw7xEJ9oZSM5ZbqyBw",  "t-account": "_KaguyaLuna"},
+          { "id": "Fw--zRltlyE",  "name": "Dance With Cinderella !",  "artist": "輝夜 月",  "time": "3:06",  "date": "2019/06/26",  "y-channel": "UCQYADFw7xEJ9oZSM5ZbqyBw",  "t-account": "_KaguyaLuna"},
+          { "id": "vhd1Pz8XRZw",  "name": "Zero In Zero",  "artist": "久遠千歳",  "time": "3:05",  "date": "2019/04/01",  "y-channel": "UCP2o-o6u4uX3uq1hXspl0rg",  "t-account": "samayuzame"},
+          { "id": "PGnO5rWsAok",  "name": "ChuChuChu♡ダーリン",  "artist": "響木アオ",  "time": "4:28",  "date": "2018/05/24",  "y-channel": "UCNwo7eikmX5HPs7NedWVBgw",  "t-account": "hibiki_ao"},
+          { "id": "EuemLv9DNG4",  "name": "スタートの合図",  "artist": "響木アオ",  "time": "2:44",  "date": "2018/10/06",  "y-channel": "UC1oPBUWifc0QOOY8DEKhLuQ",  "t-account": "hibiki_ao"},
+          { "id": "Zc6Hhcxn71s",  "name": "ChuChuChu♡Darling【English ver.】",  "artist": "響木アオ",  "time": "4:29",  "date": "2018/12/25",  "y-channel": "UCNwo7eikmX5HPs7NedWVBgw",  "t-account": "hibiki_ao"},
+          { "id": "If_GLYKh4aY",  "name": "Life is tasty!",  "artist": "燦鳥ノム",  "time": "5:43",  "date": "2019/05/28",  "y-channel": "UCwRKt_raV3N5KZgxcFyC1vw",  "t-account": "suntory_nomu"},
+          { "id": "hmFr9rj7-pE",  "name": "君にルムウム",  "artist": "燦鳥ノム",  "time": "3:24",  "date": "2019/07/31",  "y-channel": "UCwRKt_raV3N5KZgxcFyC1vw",  "t-account": "suntory_nomu"},
+          { "id": "7ZO9KJFfjz0",  "name": "Moment",  "artist": "朱宮キキ",  "time": "2:59",  "date": "2018/10/31",  "y-channel": "UChNNAcQWbBiNveovGBBEIMQ",  "t-account": "kiki_akemiya38"},
+          { "id": "iTv1zqQsXic",  "name": "もしも魔法が",  "artist": "将星アーサー",  "time": "2:25",  "date": "2019/01/14",  "y-channel": "UCDN3g0e86s64dvG6udZr5EA",  "t-account": ""},
+          { "id": "kpHKqoEqByM",  "name": "♡",  "artist": "将星アーサー",  "time": "4:25",  "date": "2019/03/27",  "y-channel": "UCDN3g0e86s64dvG6udZr5EA",  "t-account": ""},
+          { "id": "SnkUxyMoR5s",  "name": "オトナのオトメ",  "artist": "森中花咲",  "time": "3:11",  "date": "2019/05/23",  "y-channel": "UCtpB6Bvhs1Um93ziEDACQ8g",  "t-account": "KazakiMorinaka"},
+          { "id": "MFWtsp2MEgw",  "name": "BEAM!!",  "artist": "水月せな&星野光",  "time": "4:34",  "date": "2019/05/20",  "y-channel": "UCUHsCratmjA7dPbAulQi7dQ",  "t-account": "Starlight_chann"},
+          { "id": "sOFbm_XHflA",  "name": "Pisces",  "artist": "雛見沢くるみ",  "time": "6:11",  "date": "2019/07/21",  "y-channel": "UC1ngKt9O50C2Zz5OfqZtbwg",  "t-account": "kennamba"},
+          { "id": "iozEj0c8oaw",  "name": "あこがれ",  "artist": "雛見沢くるみ",  "time": "1:59",  "date": "2019/07/21",  "y-channel": "UC1ngKt9O50C2Zz5OfqZtbwg",  "t-account": "kennamba"},
+          { "id": "3cqV5BKJHyk",  "name": "comet",  "artist": "星街すいせい",  "time": "4:04",  "date": "2018/11/22",  "y-channel": "UC5CwaMl1eIgY8h02uZw7u8A",  "t-account": "suisei_hosimati"},
+          { "id": "zLak0dxBKpM",  "name": "天球、彗星は夜を跨いで",  "artist": "星街すいせい",  "time": "4:19",  "date": "2019/03/22",  "y-channel": "UC5CwaMl1eIgY8h02uZw7u8A",  "t-account": "suisei_hosimati"},
+          { "id": "FFtKDxZGs8A",  "name": "ネオンライト",  "artist": "星宮とと",  "time": "4:28",  "date": "2019/04/08",  "y-channel": "UCzeNz4SVio_XLLYQLX8DhJw",  "t-account": "hoshimiya_toto"},
+          { "id": "JzDMDOYoKi4",  "name": "いつも私が",  "artist": "天羽よつは",  "time": "3:24",  "date": "2019/03/29",  "y-channel": "UCO2bnzPlCau6YzLoSt8EDdA",  "t-account": "amahane428"},
+          { "id": "OLWqLMbq5QY",  "name": "MapleDancer",  "artist": "樋口楓",  "time": "3:18",  "date": "2018/07/13",  "y-channel": "UCsg-YqdqQ-KFF0LNk23BY4A",  "t-account": "HiguchiKaede"},
+          { "id": "Vs9dX8C9Cn8",  "name": "奏でろ音楽！！！",  "artist": "樋口楓",  "time": "4:14",  "date": "2018/12/10",  "y-channel": "UCsg-YqdqQ-KFF0LNk23BY4A",  "t-account": "HiguchiKaede"},
+          { "id": "w565CF7KsHA",  "name": "皐月の風",  "artist": "樋口楓",  "time": "2:08",  "date": "2018/12/24",  "y-channel": "UCsg-YqdqQ-KFF0LNk23BY4A",  "t-account": "HiguchiKaede"},
+          { "id": "pGdJHcAAPlc",  "name": "放課後Memory",  "artist": "樋口楓",  "time": "3:22",  "date": "2019/03/17",  "y-channel": "UCsg-YqdqQ-KFF0LNk23BY4A",  "t-account": "HiguchiKaede"},
+          { "id": "UYBUbjeGJdE",  "name": "BREAK THIS WALL",  "artist": "樋口楓",  "time": "3:08",  "date": "2019/03/30",  "y-channel": "UCsg-YqdqQ-KFF0LNk23BY4A",  "t-account": "HiguchiKaede"},
+          { "id": "GdbaIWU9Rxg",  "name": "やきもち☆ハートブレイク",  "artist": "樋口楓",  "time": "5:19",  "date": "2019/06/21",  "y-channel": "UCsg-YqdqQ-KFF0LNk23BY4A",  "t-account": "HiguchiKaede"},
+          { "id": "8_g1VaJ0nSA",  "name": "Summermagic",  "artist": "樋口楓",  "time": "3:04",  "date": "2019/07/03",  "y-channel": "UCsg-YqdqQ-KFF0LNk23BY4A",  "t-account": "HiguchiKaede"},
+          { "id": "-DK1-JlhfrQ",  "name": "Wish!!",  "artist": "眠河ゆめな",  "time": "4:13",  "date": "2019/04/05",  "y-channel": "UCJEpGdadojQ-510MGZe3Y8A",  "t-account": "nemu_kawa"},
+          { "id": "tElBFCOCBp4",  "name": "バツ",  "artist": "眠河ゆめな",  "time": "2:58",  "date": "2019/08/01",  "y-channel": "UCJEpGdadojQ-510MGZe3Y8A",  "t-account": "nemu_kawa"},
+          { "id": "5QpoKqa6xLc",  "name": "死にたいらしい",  "artist": "勇魚",  "time": "3:11",  "date": "2018/11/16",  "y-channel": "UCqTEvChhKAh0fmpACZ0MvsA",  "t-account": "1202Isana"},
+          { "id": "sq7rVi5wX5E",  "name": "ルキロキ☆ラッキー",  "artist": "流石乃ルキ／流石乃ロキ",  "time": "3:19",  "date": "2019/02/27",  "y-channel": "UCf3DHSmd2DhZcoq2gwYXCIA",  "t-account": "RukiRoki_ch"},
+          { "id": "NFynHunb5fI",  "name": "イイカンジ！！",  "artist": "流石乃ルキ／流石乃ロキ",  "time": "3:40",  "date": "2019/06/09",  "y-channel": "UCf3DHSmd2DhZcoq2gwYXCIA",  "t-account": "RukiRoki_ch"},
+          { "id": "kHAaFI94AtI",  "name": "Brand New Day's",  "artist": "鈴谷アキ",  "time": "5:10",  "date": "2018/04/04",  "y-channel": "UCt9qik4Z-_J-rj3bKKQCeHg",  "t-account": "aki_suzuya"},
+        ];
 
-          // 挿入するHTMLを作成
-          for (var i = 0; i < data.length; i++) {
-              insert += '<tr class="' + data[i]["id"] + '">';
-              insert += '<td class="icontd"><i class="material-icons">play_circle_outline</i></td>';
-              insert += '<td class="sumtd"><img border="0" src="http://img.youtube.com/vi/' + data[i]["id"] + '/default.jpg" style="width: 100px; height: 50px; object-fit: cover;"></td>';
-              insert += '<td class="musictd"><a href="https://www.youtube.com/watch?v=' + data[i]["id"] + '" target=”_blank”>' + data[i]["name"] + '</a></td>';
-              insert += '<td>' + data[i]["artist"] + '</td>';
-              insert += '<td>' + data[i]["time"] + '</td>';
-              insert += '<td>' + data[i]["date"] + '</td>';
-              insert += '<td>';
-              insert += '<ul class="follow-me">';
-              insert += '<li><a href="https://www.youtube.com/channel/' + data[i]["y-channel"] + '" target=”_blank”></a></li>';
+        // 挿入するHTMLを作成
+        for (var i = 0; i < data.length; i++) {
+            insert += '<tr class="' + data[i]["id"] + '">';
+            insert += '<td class="icontd"><i class="material-icons">play_circle_outline</i></td>';
+            insert += '<td class="sumtd"><img border="0" src="http://img.youtube.com/vi/' + data[i]["id"] + '/default.jpg" style="width: 100px; height: 50px; object-fit: cover;"></td>';
+            insert += '<td class="musictd"><a href="https://www.youtube.com/watch?v=' + data[i]["id"] + '" target=”_blank”>' + data[i]["name"] + '</a></td>';
+            insert += '<td>' + data[i]["artist"] + '</td>';
+            insert += '<td>' + data[i]["time"] + '</td>';
+            insert += '<td>' + data[i]["date"] + '</td>';
+            insert += '<td>';
+            insert += '<ul class="follow-me">';
+            insert += '<li><a href="https://www.youtube.com/channel/' + data[i]["y-channel"] + '" target=”_blank”></a></li>';
+            if(data[i]["t-account"]) {
               insert += '<li><a href="https://twitter.com/' + data[i]["t-account"] + '" target=”_blank”></a></li>';
-              insert += '</ul>';
-              insert += '</td>';
-          };
-          $(target).append(insert);
+            }
+            insert += '</ul>';
+            insert += '</td>';
+        };
+        $(target).append(insert);
       });
 
       $(function(){
