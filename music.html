@@ -157,7 +157,7 @@
                       <i class="fas fa-search"></i>
                     </div>
                   </div>
-                  <input class="navbar-search form-control" name="word" type="text" placeholder="曲名・アーティスト名で検索" aria-label="Search"> </div>
+                  <input class="navbar-search form-control" id="inputWord" name="word" type="text" placeholder="曲名・アーティスト名で検索" aria-label="Search"> </div>
               </form>
               <nav class="nav">
                 <a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left" data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
@@ -418,12 +418,15 @@
            arg[k[0]] = k[1];
         }
         var word = arg.word;
+        if (word) {
+          word = decodeURI(word); // %付の文字なのでデコード
+          $('#inputWord').val(word);
+        }
 
         // 挿入するHTMLを作成
         for (var i = 0; i < data.length; i++) {
           // 検索ワードがあるなら絞り込み
           if (word) {
-            var word = decodeURI(word); // %付の文字なのでデコード
             if (data[i]["name"].indexOf(word) == -1 && data[i]["artist"].indexOf(word) == -1 ) {
               continue; // 曲名にもアーティスト名にも含まないならskip
             }
