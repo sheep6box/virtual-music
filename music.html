@@ -45,6 +45,23 @@
       .follow-me li a[href*="twitter.com"]::before        { border-color: #55acee; background-color: #55acee; content: "\f099"; }
       .follow-me li a[href*="youtube.com"]::before        { border-color: #cd201f; background-color: #cd201f; content: "\f16a"; }
 
+      .page-title .material-icons {
+        font-size: 2.5rem;
+        display: inline-block;
+        vertical-align: middle;
+        *zoom: 1; /* for IE6-7 */
+        *display: inline; /* for IE6-7 */
+        padding-left: 20px;
+      }
+      .page-title .material-icons:hover {
+        cursor : pointer;
+      }
+      .page-title .text {
+        display: inline-block;
+        vertical-align: middle;
+        *zoom: 1; /* for IE6-7 */
+        *display: inline; /* for IE6-7 */
+      }
       table .material-icons {
         font-size: 2.5rem;
       }
@@ -164,7 +181,11 @@
             <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                 <span class="text-uppercase page-subtitle">Music</span>
-                <h3 class="page-title">オリジナル楽曲</h3>
+                <h3 class="page-title">
+                  <div class="text">オリジナル楽曲</div>
+                  <i id="top-play" class="material-icons">play_circle_outline</i>
+                  <i id="top-shuffle" class="material-icons" title="ランダム再生ON/OFF">shuffle</i>
+                </h3>
               </div>
             </div>
             <!-- End Page Header -->
@@ -173,7 +194,7 @@
               <div class="col">
                 <div class="card card-small mb-4">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">楽曲一覧（168曲）</h6>
+                    <h6 class="m-0">楽曲一覧（168曲） <span id="musicNow"><span></h6>
                   </div>
                   <div class="card-body p-0 pb-3 text-center">
                     <table class="table mb-0 table-hover" id="musicTable">
@@ -401,13 +422,13 @@
         // 挿入するHTMLを作成
         for (var i = 0; i < data.length; i++) {
             insert += '<tr class="' + data[i]["id"] + '">';
-            insert += '<td class="icontd"><i class="material-icons">play_circle_outline</i></td>';
-            insert += '<td class="sumtd"><img border="0" src="http://img.youtube.com/vi/' + data[i]["id"] + '/default.jpg" style="width: 100px; height: 50px; object-fit: cover;"></td>';
-            insert += '<td class="musictd"><a href="https://www.youtube.com/watch?v=' + data[i]["id"] + '" target=”_blank”>' + data[i]["name"] + '</a></td>';
-            insert += '<td>' + data[i]["artist"] + '</td>';
-            insert += '<td>' + data[i]["time"] + '</td>';
-            insert += '<td>' + data[i]["date"] + '</td>';
-            insert += '<td>';
+            insert += '<td style="width: 5%;" class="icontd"><i class="material-icons">play_circle_outline</i></td>';
+            insert += '<td style="width: 10%;" class="sumtd"><img border="0" src="http://img.youtube.com/vi/' + data[i]["id"] + '/default.jpg" style="width: 100px; height: 50px; object-fit: cover;"></td>';
+            insert += '<td style="width: 25%;" class="musictd"><a href="https://www.youtube.com/watch?v=' + data[i]["id"] + '" target=”_blank”>' + data[i]["name"] + '</a></td>';
+            insert += '<td style="width: 20%;" >' + data[i]["artist"] + '</td>';
+            insert += '<td style="width: 10%;" >' + data[i]["time"] + '</td>';
+            insert += '<td style="width: 15%;" >' + data[i]["date"] + '</td>';
+            insert += '<td style="width: 15%;" >';
             insert += '<ul class="follow-me">';
             insert += '<li><a href="https://www.youtube.com/channel/' + data[i]["y-channel"] + '" target=”_blank”></a></li>';
             if(data[i]["t-account"]) {
@@ -419,7 +440,8 @@
         $(target).append(insert);
       });
 
-      var $nowTr = $('tr:first');
+      var $nowTr = $('tbody').children('tr:first');
+      var shuffleFlag = false;
 
       $(function(){
         $('.color-switcher').removeClass('visible');
@@ -428,12 +450,14 @@
 
       　$('.icontd').on("click", function(){
           $('.icontd').children('i').text('play_circle_outline');
+          $('#top-play').text('play_circle_outline');
 
           $parent = $(this).parent();
           if ($parent.hasClass('select')) {
             $parent.removeClass('select');
             $('.color-switcher').removeClass('visible');
             $('tr').removeClass('select');
+            $('#musicNow').text("");
             stopVideo();
         　} else {
             $('tr').removeClass('select');
@@ -442,8 +466,12 @@
             $nowTr = $parent;
             yutubePlay($playname);
 
+            musicname = $parent.children(".musictd").text();
+            $('#musicNow').text("▶" + musicname);
+
             $parent.addClass('select');
             $(this).children('i').text('pause_circle_filled');
+            $('#top-play').text('pause_circle_filled');
             $('.color-switcher').addClass('visible');
         　}
       　});
@@ -451,15 +479,45 @@
         $('.close').on("click", function(){
           $('tr').removeClass('select');
           $('tr').children('.icontd').children('i').text('play_circle_outline');
+          $('#top-play').text('play_circle_outline');
           stopVideo();
+        });
+
+        $('#top-play').on("click", function(){
+          if($nowTr.children('.icontd').length > 0) {
+            $nowTr.children('.icontd').click();
+          } else {
+            $('.icontd:first').click();
+          }
+        });
+
+        $('#top-shuffle').on("click", function(){
+          if(shuffleFlag) {
+            shuffleFlag = false;
+            $(this).text('shuffle');
+          } else {
+            shuffleFlag = true;
+            $(this).text('clear');
+            randomPlay();
+          }
         });
       });
 
+      // ランダム再生
+      function randomPlay() {
+        var rand_num = Math.floor(Math.random() * $('.icontd').length);
+        $(".icontd").eq(rand_num).click();
+      };
+
       // 次を再生
       function nextPlay() {
-        $next = $nowTr.next('tr');
-        if ($next) {
-          $next.children('.icontd').click();
+        if(shuffleFlag) {
+          randomPlay();
+        } else {
+          $next = $nowTr.next('tr');
+          if ($next) {
+            $next.children('.icontd').click();
+          }
         }
       };
 
