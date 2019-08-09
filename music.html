@@ -128,15 +128,6 @@
               </a>
             </nav>
           </div>
-          <form action="#" class="main-sidebar__search w-100 border-right d-sm-flex d-md-none d-lg-none">
-            <div class="input-group input-group-seamless ml-3">
-              <div class="input-group-prepend">
-                <div class="input-group-text">
-                  <i class="fas fa-search"></i>
-                </div>
-              </div>
-              <input class="navbar-search form-control" type="text" placeholder="Search for something..." aria-label="Search"> </div>
-          </form>
           <div class="nav-wrapper">
             <ul class="nav flex-column">
               <li class="nav-item">
@@ -159,14 +150,14 @@
           <div class="main-navbar sticky-top bg-white">
             <!-- Main Navbar -->
             <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
-              <form action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
+              <form action="music.html" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
                 <div class="input-group input-group-seamless ml-3">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
                       <i class="fas fa-search"></i>
                     </div>
                   </div>
-                  <input class="navbar-search form-control" type="text" placeholder="Search for something..." aria-label="Search"> </div>
+                  <input class="navbar-search form-control" name="word" type="text" placeholder="曲名・アーティスト名で検索" aria-label="Search"> </div>
               </form>
               <nav class="nav">
                 <a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left" data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
@@ -419,23 +410,40 @@
           { "id": "NFynHunb5fI",  "name": "イイカンジ！！",  "artist": "流石乃ルキ／流石乃ロキ",  "time": "3:40",  "date": "2019/06/09",  "y-channel": "UCf3DHSmd2DhZcoq2gwYXCIA",  "t-account": "RukiRoki_ch"}
         ];
 
+        // 検索ワード
+        var arg  = new Object;
+        url = location.search.substring(1).split('&');
+        for(i=0; url[i]; i++) {
+           var k = url[i].split('=');
+           arg[k[0]] = k[1];
+        }
+        var word = arg.word;
+
         // 挿入するHTMLを作成
         for (var i = 0; i < data.length; i++) {
-            insert += '<tr class="' + data[i]["id"] + '">';
-            insert += '<td style="width: 5%;" class="icontd"><i class="material-icons">play_circle_outline</i></td>';
-            insert += '<td style="width: 10%;" class="sumtd"><img border="0" src="http://img.youtube.com/vi/' + data[i]["id"] + '/default.jpg" style="width: 100px; height: 50px; object-fit: cover;"></td>';
-            insert += '<td style="width: 25%;" class="musictd"><a href="https://www.youtube.com/watch?v=' + data[i]["id"] + '" target=”_blank”>' + data[i]["name"] + '</a></td>';
-            insert += '<td style="width: 20%;" >' + data[i]["artist"] + '</td>';
-            insert += '<td style="width: 10%;" >' + data[i]["time"] + '</td>';
-            insert += '<td style="width: 15%;" >' + data[i]["date"] + '</td>';
-            insert += '<td style="width: 15%;" >';
-            insert += '<ul class="follow-me">';
-            insert += '<li><a href="https://www.youtube.com/channel/' + data[i]["y-channel"] + '" target=”_blank”></a></li>';
-            if(data[i]["t-account"]) {
-              insert += '<li><a href="https://twitter.com/' + data[i]["t-account"] + '" target=”_blank”></a></li>';
+          // 検索ワードがあるなら絞り込み
+          if (word) {
+            var word = decodeURI(word); // %付の文字なのでデコード
+            if (data[i]["name"].indexOf(word) == -1 && data[i]["artist"].indexOf(word) == -1 ) {
+              continue; // 曲名にもアーティスト名にも含まないならskip
             }
-            insert += '</ul>';
-            insert += '</td>';
+          }
+
+          insert += '<tr class="' + data[i]["id"] + '">';
+          insert += '<td style="width: 5%;" class="icontd"><i class="material-icons">play_circle_outline</i></td>';
+          insert += '<td style="width: 10%;" class="sumtd"><img border="0" src="http://img.youtube.com/vi/' + data[i]["id"] + '/default.jpg" style="width: 100px; height: 50px; object-fit: cover;"></td>';
+          insert += '<td style="width: 25%;" class="musictd"><a href="https://www.youtube.com/watch?v=' + data[i]["id"] + '" target=”_blank”>' + data[i]["name"] + '</a></td>';
+          insert += '<td style="width: 20%;" >' + data[i]["artist"] + '</td>';
+          insert += '<td style="width: 10%;" >' + data[i]["time"] + '</td>';
+          insert += '<td style="width: 15%;" >' + data[i]["date"] + '</td>';
+          insert += '<td style="width: 15%;" >';
+          insert += '<ul class="follow-me">';
+          insert += '<li><a href="https://www.youtube.com/channel/' + data[i]["y-channel"] + '" target=”_blank”></a></li>';
+          if(data[i]["t-account"]) {
+            insert += '<li><a href="https://twitter.com/' + data[i]["t-account"] + '" target=”_blank”></a></li>';
+          }
+          insert += '</ul>';
+          insert += '</td>';
         };
         $(target).append(insert);
       });
