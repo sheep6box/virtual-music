@@ -107,6 +107,13 @@
         padding-top: 10px;
         padding-bottom: 10px;
       }
+      #musicNow {
+        cursor : pointer;
+        color: #007bff;
+      }
+      #musicNow:hover {
+        color:#0056b3;
+      }
     </style>
   </head>
   <body class="h-100">
@@ -193,7 +200,7 @@
                 <span class="text-uppercase page-subtitle">Music</span>
                 <h3 class="page-title">
                   <div class="text">VTuberオリジナル楽曲</div>
-                  <i id="top-play" class="material-icons">play_circle_outline</i>
+                  <i id="top-play" class="material-icons" title="再生/停止">play_circle_outline</i>
                   <i id="top-shuffle" class="material-icons" title="ランダム再生ON/OFF">shuffle</i>
                 </h3>
               </div>
@@ -204,7 +211,7 @@
               <div class="col">
                 <div class="card card-small mb-4">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">楽曲一覧<span id="musicCount"></span> <span id="musicNow"><span></h6>
+                    <h6 class="m-0">楽曲一覧<span id="musicCount"></span> <span id="musicNow" title="曲の位置まで移動"><span></h6>
                   </div>
                   <div class="card-body p-0 pb-3 text-center">
                     <table class="table mb-0 table-hover" id="musicTable">
@@ -225,6 +232,7 @@
                   </div>
                 </div>
               </div>
+              <!-- <iframe id="sc-widget" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/660842915&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
             </div>
             <!-- End Default Light Table -->
           </div>
@@ -254,6 +262,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>
     <script src="scripts/extras.1.1.0.min.js"></script>
     <script src="scripts/shards-dashboards.1.1.0.min.js"></script>
+    <!-- <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script> -->
     <script>
       $(function() {
         var target = '#musicTable tbody';
@@ -544,9 +553,9 @@
           }
 
           insert += '<tr class="' + data[i]["id"] + '">';
-          insert += '<td style="width: 5%;" class="icontd"><i class="material-icons">play_circle_outline</i></td>';
+          insert += '<td style="width: 5%;" class="icontd" title="再生/停止"><i class="material-icons">play_circle_outline</i></td>';
           insert += '<td style="width: 10%;" class="sumtd"><img border="0" src="http://img.youtube.com/vi/' + data[i]["id"] + '/default.jpg" style="width: 100px; height: 50px; object-fit: cover;"></td>';
-          insert += '<td style="width: 25%;" class="musictd"><a href="https://www.youtube.com/watch?v=' + data[i]["id"] + '" target=”_blank”>' + data[i]["name"] + '</a></td>';
+          insert += '<td style="width: 25%;" class="musictd"><a title="動画を別タブで開く" href="https://www.youtube.com/watch?v=' + data[i]["id"] + '" target=”_blank”>' + data[i]["name"] + '</a></td>';
           insert += '<td style="width: 20%;" >' + data[i]["artist"] + '</td>';
           insert += '<td style="width: 10%;" >' + data[i]["time"] + '</td>';
           insert += '<td style="width: 15%;" >' + data[i]["date"] + '</td>';
@@ -626,6 +635,19 @@
             randomPlay();
           }
         });
+
+        $('#musicNow').on("click", function(){
+          var table             = $('#musicTable');
+          var baseRow           = table.find("tr:eq(" + 0 + ")");
+          var baseRowPosition   = baseRow.position();
+          var targetRow         = $('tr.select');
+          var targetRowPosition = targetRow.position();
+
+          // 対象の行にスクロールする
+          $('.card-body').animate(
+              { scrollTop : targetRowPosition.top - baseRowPosition.top }
+          );
+        });
       });
 
       // ランダム再生
@@ -686,6 +708,16 @@
         player.loadVideoById(videoId);
         player.playVideo();
       }
+
+      // soundcloud検証
+      // (function(){
+      //   var widget = SC.Widget(document.getElementById('sc-widget'));
+      //   widget.bind(SC.Widget.Events.READY, function() {
+      //     widget.bind(SC.Widget.Events.PLAY, function() {
+      //       widget.play();
+      //     });
+      //   });
+      // }());
     </script>
   </body>
 </html>
